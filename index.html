@@ -128,8 +128,9 @@
   </div>
 
   <script>
-    // ★ここを自分の GitHub Raw ファイルの URL に変える★
-    const QUOTES_URL = "https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/quotes.json";
+    // GitHub Pages 上の JSON（inotinogoroku.json）を参照
+    // ファイル位置: https://shitoronkeki-byte.github.io/inotinogoroku/inotinogoroku.json
+    const QUOTES_URL = "https://shitoronkeki-byte.github.io/inotinogoroku/inotinogoroku.json";
 
     let quotes = [];
 
@@ -154,7 +155,7 @@
       }
 
       const dayIndex = getDaysSince5AM();
-      const quoteIndex = ((dayIndex % quotes.length) + quotes.length) % quotes.length; // 念のため負数対策
+      const quoteIndex = ((dayIndex % quotes.length) + quotes.length) % quotes.length;
 
       const today = new Date();
 
